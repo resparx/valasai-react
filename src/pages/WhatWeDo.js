@@ -106,7 +106,7 @@ align-items: center;
 `
 
 
-const WhatWeDo = ({revealSecondBlock}) => {
+const WhatWeDo = ({revealSecondBlock, history}) => {
     const [showTitle,setShowTitle] = useState(true);
 
     useEffect(()=>{
@@ -117,6 +117,7 @@ const WhatWeDo = ({revealSecondBlock}) => {
         if(!revealSecondBlock)
             setShowTitle(true);
     },[revealSecondBlock]);
+
 
     const secFoldContent = [
         { id: "va-324",
@@ -176,14 +177,14 @@ const WhatWeDo = ({revealSecondBlock}) => {
     ];
 
 
-    const handleArticle = ({ article, id }) => {
-        navigate('posts', { state: { id } }).then(()=> null)
+    const handleArticle = ({ article, id, cover }) => {
+        history.push('posts/'+article, { state: { id, cover } })
     }
 
     return (<ComponentWrapper revealSecondBlock={revealSecondBlock} showTitle={showTitle} >
         <span>WHAT WE DO</span>
         <MiniArticleBlockWrapper showTitle={showTitle}>
-            {secFoldContent.map((ele,index)=><MiniArticleBlock onClick={()=>handleArticle({article: ele.path, id: ele.id})} key={index} bgImage={ele.img}>
+            {secFoldContent.map((ele,index)=><MiniArticleBlock onClick={()=>handleArticle({article: ele.path, id: ele.id, cover: ele.img})} key={index} bgImage={ele.img}>
                 <span>{ele.title}</span>
             </MiniArticleBlock>)}
         </MiniArticleBlockWrapper>

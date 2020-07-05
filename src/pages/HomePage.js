@@ -10,8 +10,7 @@ background-image: transparent;
 transition: all 100ms ease-out; 
 background: #000000;
 `
-const HomePage = () => {
-
+const HomePage = ({history}) => {
     const [mainTextIn, setMainTextIn] = useState(true);
 
     const handleScroll = (e) => {
@@ -24,7 +23,7 @@ const HomePage = () => {
     }
     return <HomePageWrapper onScroll={handleScroll}>
         <Home mainTextIn={mainTextIn} />
-        <WhatWeDo revealSecondBlock={!mainTextIn} />
+        <WhatWeDo history={history} revealSecondBlock={!mainTextIn} />
     </HomePageWrapper>
 }
 
