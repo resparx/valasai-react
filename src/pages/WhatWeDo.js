@@ -177,14 +177,14 @@ const WhatWeDo = ({revealSecondBlock, history}) => {
     ];
 
 
-    const handleArticle = ({ article, id, cover }) => {
-        history.push('posts/'+article, { state: { id, cover } })
+    const handleArticle = ({ article, id, cover, title }) => {
+        history.push('posts/'+article, { state: { id, cover, title } })
     }
 
     return (<ComponentWrapper revealSecondBlock={revealSecondBlock} showTitle={showTitle} >
         <span>WHAT WE DO</span>
         <MiniArticleBlockWrapper showTitle={showTitle}>
-            {secFoldContent.map((ele,index)=><MiniArticleBlock onClick={()=>handleArticle({article: ele.path, id: ele.id, cover: ele.img})} key={index} bgImage={ele.img}>
+            {secFoldContent.map((ele,index)=><MiniArticleBlock onClick={()=>handleArticle({article: ele.path, id: ele.id, cover: ele.img, title: ele.title})} key={index} bgImage={ele.img}>
                 <span>{ele.title}</span>
             </MiniArticleBlock>)}
         </MiniArticleBlockWrapper>
