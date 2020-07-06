@@ -91,6 +91,7 @@ width: 33.33%;
 display: flex;
 justify-content: center;
 align-items: center;
+overflow: none;
 &:hover{
   transform: scale(1.2);
   transition: all .5s ease;

@@ -20,7 +20,6 @@ const ArticleBanner = styled.div`
 
 const ArticleContentContainer = styled.div`
     background: rgba(0, 0, 0, 0.69);
-    height: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,8 +45,8 @@ const ArticlePage = ({history}) => {
                 <p>
                     loreCulturally, Indian society sees debt as something that should be generally avoided. Last year, at a time when a number of companies struggled with debts, this sentiment was all pervading among stock investors, who shunned leveraged businesses to bet on debt-free ones. That resulted in an asymmetric rise of pockets of stocks.
                     Stocks of a majority of companies that are virtually debt free jumped as much as 122 per cent in 2019. Fifteen of the top debt-free companies rewarded their investo ..
-                    Read more at:
-                    https://economictimes.indiatimes.com/markets/stocks/news/wanna-play-safe-look-at-debt-free-stocks-that-rallied-up-to-122-in-2019/articleshow/73183322.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppstm
+                    loreCulturally, Indian society sees debt as something that should be generally avoided. Last year, at a time when a number of companies struggled with debts, this sentiment was all pervading among stock investors, who shunned leveraged businesses to bet on debt-free ones. That resulted in an asymmetric rise of pockets of stocks. Stocks of a majority of companies that are virtually debt free jumped as much as 122 per cent in 2019. Fifteen of the top debt-free companies rewarded their investo .. Read more at: https://economictimes.indiatimes.com/markets/stocks/news/wanna-play-safe-look-at-debt-free-stocks-that-rallied-up-to-122-in-2019/articleshow/73183322.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppstmß
+                    Read more at:vhttps://economictimes.indiatimes.com/markets/stocks/news/wanna-play-safe-look-at-debt-free-stocks-that-rallied-up-to-122-in-2019/articleshow/73183322.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppstm
                 </p>
             </ArticleContentContainer>
         </ArticleBanner>
